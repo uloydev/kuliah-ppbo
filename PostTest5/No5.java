@@ -41,7 +41,10 @@ class Time {
 
     public String toUniversalString() {
         this.timeValidation();
-        return this.hour + ":" + this.minute + ":" + this.second;
+        Object hour = this.hour == 0 ? "00" : this.hour;
+        Object minute = this.minute == 0 ? "00" : this.minute;
+        Object second = this.second == 0 ? "00" : this.second;
+        return hour + ":" + minute + ":" + second;
     }
 
     public String toString() {
@@ -49,7 +52,10 @@ class Time {
         this.timeValidation();
         suffix = (this.hour < 12) ? "AM" : "PM";
         this.hour = (this.hour != 0 ) ? this.hour % 12 : 12;
-        return this.hour + ":" + this.minute + ":" + this.second + " " + suffix;
+        Object hour = this.hour == 0 ? "00" : this.hour;
+        Object minute = this.minute == 0 ? "00" : this.minute;
+        Object second = this.second == 0 ? "00" : this.second;
+        return hour + ":" + minute + ":" + second + " " + suffix;
     }
 
     private void timeValidation() {
