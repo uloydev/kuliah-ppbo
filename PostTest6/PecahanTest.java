@@ -1,8 +1,8 @@
 public class PecahanTest {
     public static void main(String[] args) {
-        Pecahan pecahan1 = new Pecahan(1, 2);
-        Pecahan pecahan2 = new Pecahan(2, 3);
-        print("welcome to program pecahan ala ala\n");
+        Pecahan pecahan1 = new Pecahan(3, 2);
+        Pecahan pecahan2 = new Pecahan(5, 6);
+        print("welcome to program pecahan\n");
         print(pecahan1.toString() + " + " + pecahan2.toString() + " = ");
         pecahan1.tambah(pecahan2);
         print(pecahan1);
