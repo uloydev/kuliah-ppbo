@@ -12,9 +12,9 @@ public class GameOopTest {
         for (int i = 0; i < 3; i++) {
             gundalgandul.pukul(wiro);
         }
-        print("wiro sableng memukul gundala 4x beturut-turut\n");
+        print("wiro sableng menendang gundala 4x beturut-turut\n");
         for (int i = 0; i < 4; i++) {
-            wiro.pukul(gundalgandul);
+            wiro.tendang(gundalgandul);
         }
         print("pertarungan berakhir\n");
         print("\nlife point wiro sableng = " + wiro.getLifePoint());
