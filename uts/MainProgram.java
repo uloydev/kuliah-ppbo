@@ -66,14 +66,14 @@ public class MainProgram {
         Rekening rekening2 = new Rekening();
 
         nasabah1.setNama("MEMED");
-        nasabah1.setNoKTP("28329ddd3728384");
+        nasabah1.setNoKTP("283293728384");
         nasabah2.setNama("MAMAD");
         nasabah2.setNoKTP("897493474386");
 
         nasabah1.buatRekening(rekening1, 50000);
         nasabah2.buatRekening(rekening2, 10000);
 
-        print("Status awal rekening nsabah: ");
+        print("Status awal rekening nasabah: ");
         print("\nSaldo awal rekening " + nasabah1.getNoKTP() + " milik " + nasabah1.getNama() + " adalah Rp " + rekening1.getSaldo());
         print("\nSaldo awal rekening " + nasabah2.getNoKTP() + " milik " + nasabah2.getNama() + " adalah Rp " + rekening2.getSaldo());
 
@@ -81,12 +81,12 @@ public class MainProgram {
         print("\n\nSisa saldo " + nasabah1.getNama() + " setelah diambil Rp 20000 adalah Rp " + rekening1.getSaldo());
 
         nasabah1.nabungUang(rekening1, 40000);
-        print("\njumlah saldo " + nasabah2.getNama() + " setelah menabung Rp 40000 adalah Rp " + rekening2.getSaldo());
+        print("\njumlah saldo " + nasabah1.getNama() + " setelah menabung Rp 40000 adalah Rp " + rekening1.getSaldo());
 
         nasabah1.transfer(rekening1, rekening2, 50000);
         print("\nSisa saldo " + nasabah1.getNama() + " setelah melakukan transfer Rp 50000 kepada " + nasabah2.getNama() + " adalah Rp " + rekening1.getSaldo());
 
-        print("\n\nStatus akhir rekening nsabah: ");
+        print("\n\nStatus akhir rekening nasabah: ");
         print("\nSaldo akhir rekening " + nasabah1.getNoKTP() + " milik " + nasabah1.getNama() + " adalah Rp " + rekening1.getSaldo());
         print("\nSaldo akhir rekening " + nasabah2.getNoKTP() + " milik " + nasabah2.getNama() + " adalah Rp " + rekening2.getSaldo());
 
