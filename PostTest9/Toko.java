@@ -1,5 +1,6 @@
 import java.util.HashMap;
-import java.util.Set;
+import java.util.List;
+import java.util.ArrayList;
 
 class Toko {
     private HashMap<String, HashMap<String, HashMap<String, Produk>>> database;
@@ -15,20 +16,16 @@ class Toko {
         this.database.get("komponen bangunan").put("pintu", new HashMap<>());
     }
 
-    public Set<String> getKategori() {
-        return this.database.keySet();
+    public List<String> getKategori() {
+        return new ArrayList<>(this.database.keySet());
     }
 
-    public Set<String> getSubKategori(String kategori) {
-        return this.database.get(kategori).keySet();
+    public List<String> getSubKategori(String kategori) {
+        return new ArrayList<>(this.database.get(kategori).keySet());
     }
 
     public void addProduk(String kategori, String subKategori, String nama, Produk produk) {
         this.database.get(kategori).get(subKategori).put(nama, produk);
-    }
-
-    public void updateProduk(String kategori, String subKategori, String nama, Produk produk) {
-        this.database.get(kategori).get(subKategori).replace(nama, produk);
     }
 
     public void deleteProduk(String kategori, String subKategori, String nama) {
@@ -40,8 +37,8 @@ class Toko {
         get(nama);
     }
 
-    public Set<String> getProdukList(String kategori, String subKategori) {
-        return this.database.get(kategori).get(subKategori).keySet();
+    public List<String> getProdukList(String kategori, String subKategori) {
+        return new ArrayList<>(this.database.get(kategori).get(subKategori).keySet());
     }
 
     public HashMap<String, Integer> getNilaiBarang() {

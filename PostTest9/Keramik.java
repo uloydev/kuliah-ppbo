@@ -1,8 +1,13 @@
 class Keramik extends KomponenBangunan{
+    public static enum Jenis {
+        KW1,
+        KW2,
+        KW3;
+    }
     private int panjang, lebar;
-    private String jenis;
+    private Jenis jenis;
     
-    Keramik(int harga, int berat, int stok, boolean bisaCat, boolean bisaTukar, int panjang, int lebar, String jenis) {
+    Keramik(int harga, int berat, int stok, boolean bisaCat, boolean bisaTukar, int panjang, int lebar, Jenis jenis) {
         super(harga, berat, stok, bisaCat, bisaTukar);
         this.panjang = panjang;
         this.lebar = lebar;
@@ -17,7 +22,7 @@ class Keramik extends KomponenBangunan{
         return lebar;
     }
 
-    public String getJenis() {
+    public Jenis getJenis() {
         return jenis;
     }
 
@@ -29,7 +34,7 @@ class Keramik extends KomponenBangunan{
         this.lebar = lebar;
     }
 
-    public void setJenis(String jenis) {
+    public void setJenis(Jenis jenis) {
         this.jenis = jenis;
     }
 }
