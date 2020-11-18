@@ -6,28 +6,27 @@ public class Main {
 
     public static void main(String[] args) {
         char lagi;
-        Toko tokoBatak = buatToko();
-        print(tokoBatak.getProduk("material", "kayu", "kayu jati").getHarga());
+        Toko tokoMakmurJayaBangunan = buatToko();
         do{
             clearScreen();
             switch(pilihMenu()) {
                 case 1 :
                     print("\n\n============== TAMBAH PRODUK ===============\n");
-                    tokoBatak = tambahProduk(tokoBatak);
+                    tokoMakmurJayaBangunan = tambahProduk(tokoMakmurJayaBangunan);
                     break;
                 case 2 :
                     print("\n\n============== HAPUS PRODUK ===============\n");
-                    tokoBatak = hapusProduk(tokoBatak);
+                    tokoMakmurJayaBangunan = hapusProduk(tokoMakmurJayaBangunan);
                     break;
                 case 3 :
                     print("\n\n============== NILAI BARANG ===============\n");
-                    tokoBatak.getNilaiBarang().forEach((key, value) -> {
+                    tokoMakmurJayaBangunan.getNilaiBarang().forEach((key, value) -> {
                         print(key + " = Rp." + value + "\n");
                     });
                     break;
                 case 4 :
                     print("\n\n============== STOK BARANG ===============\n");
-                    tokoBatak.getStokBarang().forEach((key, value) -> {
+                    tokoMakmurJayaBangunan.getStokBarang().forEach((key, value) -> {
                         print(key + " = " + value + "\n");
                     });
                     break;
